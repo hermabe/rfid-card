@@ -3,7 +3,7 @@ Script for getting EM-number from NTNU access card
 
 The NTNU access cards have two different chips in them. A 13.56 MHz Mifare Classic 1K and a 125 KHz chip. From these chips one can read out the M- and EM-numbers respectively. This script finds the EM number.
 
-I used a Raspberry Pi and an UART enabled 125 KHz rfid reader bought at [Omega Verksted](omegav.no). 
+I used a Raspberry Pi and an UART enabled 125 KHz rfid reader bought at [Omega Verksted](https://omegav.no). 
 
 The card emits 10 bytes when read. These are on the format
 
