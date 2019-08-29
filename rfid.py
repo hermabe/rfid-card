@@ -18,6 +18,7 @@ def dataChecks(data, length):
 
 ser = serial.Serial('/dev/serial0')
 
+print("Scanning for cards:")
 while True:
     if ser.in_waiting > 0:
         byte = ser.read(1)[0]
@@ -26,6 +27,5 @@ while True:
             data = ser.read(length-2).hex()
             reversedEM = int(data[4:12], 16)
             EM = reverseBytes(reversedEM)
-            print("EM", EM)
-
-        
+            print('EM ' + str(EM).zfill(10))
+ 
